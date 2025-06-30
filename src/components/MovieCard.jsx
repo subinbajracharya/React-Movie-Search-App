@@ -29,7 +29,7 @@ const MovieCard = ({
       </div>
       <div className="movie-content p-3">
         <h2 className="movie-title">{title}</h2>
-        <div className="movie-rating mb-2">IMDB Rating: {rating}</div>
+        <div className="movie-rating mb-2 fw-bold">IMDB Rating: {rating}</div>
         <div className="movie-desc mb-2">{summary}</div>
         <div className="d-flex gap-3 mb-3">
           {type ? (
