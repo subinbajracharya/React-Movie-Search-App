@@ -67,7 +67,7 @@ const MovieCatalogue = ({ movieList, deleteMovie }) => {
             <div className="row">
               {displayMovieList.map((movie, index) => (
                 <div
-                  className="movie-filtered-cards col-12 col-md-6 col-lg-4"
+                  className="movie-filtered-cards col-12 col-md-6 mb-4"
                   key={index}
                 >
                   <MovieCard {...movie} deleteMovie={deleteMovie} />

@@ -31,10 +31,12 @@ const MovieCard = ({
         <h2 className="movie-title">{title}</h2>
         <div className="movie-rating mb-2 fw-bold">IMDB Rating: {rating}</div>
         <div className="movie-desc mb-2">{summary}</div>
-        <div className="d-flex gap-3 mb-3">
-          {type ? (
-            <>
-              <div>{type}</div>
+        {type ? (
+          <>
+            <div className="movie-type">
+              <div className="bg-info text-white rounded-3 text-capitalize mb-2">
+                Movie Genre: {type}
+              </div>
               <button
                 className="btn btn-danger"
                 type="button"
@@ -45,9 +47,11 @@ const MovieCard = ({
               >
                 Delete
               </button>
-            </>
-          ) : (
-            <>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="d-flex gap-3 mb-3">
               <button
                 className="btn btn-warning"
                 type="button"
@@ -68,9 +72,9 @@ const MovieCard = ({
               >
                 Drama
               </button>
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
