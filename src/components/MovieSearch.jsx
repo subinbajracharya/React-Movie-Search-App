@@ -20,6 +20,8 @@ const MovieSearch = ({ setMovieObj, setIsSearching, setIsLoading }) => {
         rating: response.data.imdbRating,
         summary: response.data.Plot,
         image: response.data.Poster,
+        released: response.data.Released,
+        genre: response.data.Genre,
         imdbID: response.data.imdbID,
       };
 
@@ -32,6 +34,12 @@ const MovieSearch = ({ setMovieObj, setIsSearching, setIsLoading }) => {
     if (search && search != "") {
       setIsSearching(false);
       searchMovie(search);
+    }
+  };
+
+  const handleOnKeyUp = (event) => {
+    if (event.key === "Enter") {
+      handleOnSearch();
     }
   };
 
@@ -53,6 +61,7 @@ const MovieSearch = ({ setMovieObj, setIsSearching, setIsLoading }) => {
             onFocus={() => {
               setIsSearching(true);
             }}
+            onKeyUp={handleOnKeyUp}
           />
           <button
             className="btn btn-danger"

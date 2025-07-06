@@ -11,6 +11,8 @@ const HeroBanner = ({ addMovieList }) => {
     image: "",
     rating: 0,
     summary: "",
+    released: "",
+    genre: "",
   });
 
   return (
