@@ -9,7 +9,7 @@ const MovieSearch = ({ setMovieObj, setIsSearching, setIsLoading }) => {
   const searchMovie = async (s) => {
     setIsLoading(true);
     const response = await axios.get(
-      `http://www.omdbapi.com/?t=${s}&apikey=${apikey}`
+      `https://www.omdbapi.com/?t=${s}&apikey=${apikey}`
     );
     console.log(response.data);
     setIsLoading(false);
